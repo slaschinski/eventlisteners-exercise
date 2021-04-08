@@ -31,7 +31,14 @@
         document.getElementById(value).remove();
       }
 
+      function changeInnerHtml(event) {
+        const myValue = event.target.value;
+        document.querySelector('#id2').parentElement.innerHTML = myValue;
+      }
+
       document.getElementById('inputbutton').addEventListener('click', removeElement);
+
+      document.querySelector('#inputtext').addEventListener('change', changeInnerHtml)
     </script>
   </body>
 </html>
